@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Output</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .container {
+            width: 50%;
+            max-width: 600px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            text-align: center;
+            min-height: 200px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h1 {
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 30px);
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 20px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        .output-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f5e9;
+            border: 2px solid #4c86af;
+            border-radius: 10px;
+            font-size: 18px;
+            color: #2e7d32;
+            max-height: 550px;
+            overflow-y: auto;
+            text-align: left;
+        }
+
+        .output-box strong {
+            margin-top: 10px;
+            padding: 10px; /* Increased padding */
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            font-size: 18px;
+            color: #2e7d32;
+            text-align: left;
+            min-height: 100px; /* Increased height */
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe</h1>
+        {% if output %}
+        <div class="output-box">
+            <strong>Diet Recipe:</strong>
+            {{ output }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
