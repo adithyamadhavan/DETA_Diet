@@ -1,4 +1,4 @@
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 import pandas as pd
 from transformers import pipeline
 import os
@@ -6,7 +6,7 @@ import boto3
 from io import BytesIO
 from flask import Flask,request,render_template
 
-load_dotenv()
+#load_dotenv()
 region_name = os.getenv('region_name')
 api_key = os.getenv('aws_access_key_id')
 secret_key = os.getenv('aws_secret_access_key')
